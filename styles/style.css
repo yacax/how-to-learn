@@ -1,5 +1,24 @@
-/* .page - стили всей страницы */
+/* НОВАЯ РАЗМЕТКА НОТАЦИИ БЛОКОВ */
 
+
+/*   =========================   МАЛЕНЬКИЕ БЛОКИ  =========================   */
+
+/*                              === БЛОК .logo ===                            */
+.logo {
+  width: 228px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/*                             === БЛОК .link ===                             */
+
+.link {
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+/* ========================= БЛОК-ВСЯ-СТРАНИЦА .page ========================= */
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -13,98 +32,165 @@
   padding: 0;
 }
 
-/* общие свойства текста */
 
-.page__subtitle {
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 34px;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-.page__text {
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.2;
-  text-indent: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-.page__text_bold {
-  font-weight: 600;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-.page__text_normal {
-  font-weight: normal;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-.page__text-table {
-  margin-top: 20px;
-  margin-bottom: 0;
-}
-
-/* общие свойства ссылок */
-
-.page__link {
-  text-decoration: none;
-  color: #2f80ed;
-}
-
-/* общие свойства изображений */
-
-.image {
-  position: absolute;
-  display: block;
+/* =========================        БЛОК .header     ========================= */
+.header {
+  display: flex;
+  position: relative;
+  height: 756px;
+  /* выше установили ограничения для секции */
+  margin: auto;
+  background-color: #f2f2f2;
   z-index: 0;
 }
 
-.background_image {
+/*                              === ЭЛЕМЕНТЫ ===                               */
+/*                                ---ТЕКСТ---                                  */
+/*                             h1  ЗАГОЛОВОК TITLE                             */
+.header__title {
+  font-size: 102px;
+  line-height: 96px;
+  font-weight: 600;
+  width: 730px;
+  align-self: center;
+  margin: 0 0 0 64px;
+  z-index: 3;
+}
+
+/*                            h2 ПОДЗАГОЛОВОК SUBTITLE                          */
+.header__subtitle {
+  position: absolute;
+  width: 388px;
+  left: 64px;
+  bottom: 30px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 25px;
+  z-index: 5;
+}
+
+/*                                  ИЗОБРАЖЕНИЯ                                */
+.header__header-image {
+  position: absolute;
+  display: block;
+  width: 765px;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.header__square-pic {
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
+  height: 568px;
+  width: 568px;
+  right: 0;
+  top: 64px;
+  background-color: #2f80ed;
+  z-index: -1;
 }
 
-/* общие настройки блоков */
+.logo_place_header {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  background-image: url('../images/logo_place_header.svg');
+}
 
-.flex-row {
+
+/*   ========================  СЕКЦИЯ .description  ========================   */
+.description {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  padding-top: 100px;
 }
 
-.flex-column {
+/*                     ======  БЛОК .two-columns =====                         */
+.two-columns {
   display: flex;
-  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0;
-}
-
-.centered-block {
   margin: auto;
 }
 
-/* темная тема */
 
-.theme_dark {
-  background-color: #1f1f1f;
-  color: #fff;
+.two-columns_place_description {
+  width: 80%;
+  min-width: 784px;
 }
 
-.table__cell_theme_dark {
-  width: 200px;
-  margin-top: 80px;
+/*                              === ЭЛЕМЕНТЫ ===                               */
+/*                                ---ТЕКСТ---                                  */
+.two-columns__brief {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #2f80ed;
+  width: 175px;
+  justify-content: flex-start;
+  margin: 0;
 }
 
-/* table */
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
 
+}
+
+.two-columns__paragraph {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 34px;
+  margin: 0;
+}
+
+.two-columns__span-accent {
+  display: block;
+  margin: 30px 0;
+}
+
+.two-columns__span-accent_style_bold {
+  font-weight: 600;
+}
+
+/*    ========================    СЕКЦИЯ .digits   ========================    */
+/*                                     DIGITS                                  */
+.digits {
+  display: flex;
+  padding: 100px 0;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 0;
+}
+
+/*                             ======  БЛОК  =====                             */
+/*                              h1 ЗАГОЛОВОК TITLE                             */
+.section-title {
+  font-size: 60px;
+  font-weight: 600;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  z-index: 2;
+}
+
+/*                              ======  БЛОК  =====                            */
+/*                           h2 ПОДЗАГОЛОВОК SUBTITLE                          */
+.section-subtitle {
+  font-size: 24px;
+  font-weight: normal;
+  width: 60%;
+  text-align: center;
+  line-height: 34px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/*                              ======  БЛОК  =====                            */
+/*                                 ТАБЛИЦА TABLE                               */
 .table {
   display: flex;
   flex-direction: row;
@@ -112,10 +198,12 @@
   justify-content: space-between;
   align-content: flex-start;
   align-items: flex-start;
-  padding: 0;
   width: 1100px;
+  padding: 0;
+  margin: 0 auto;
 }
 
+/*                              === ЭЛЕМЕНТЫ ===                               */
 .table__cell {
   width: 250px;
   min-height: 140px;
@@ -128,157 +216,69 @@
   margin-top: 60px;
 }
 
-.table__subtitle {
+
+/*                              === ЭЛЕМЕНТЫ ===                               */
+/*                                 ---ТЕКСТ---                                 */
+.table__heading {
   display: flex;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.15;
   margin: 0;
+  margin-bottom: 20px;
 }
 
-
-
-/* .header  */
-
-.header {
-  display: flex;
-  position: relative;
-  height: 756px;
-  /* выше установили ограничения для секции */
-  background-color: #f2f2f2;
-  z-index: 0;
-
-}
-
-/* свойства текста шапки */
-
-.header__title {
-  font-size: 102px;
-  line-height: 96px;
-  width: 730px;
-  align-self: center;
-  margin: 0 0 0 64px;
-  z-index: 3;
-}
-
-.page__subtitle_header {
+.table__text {
   font-size: 18px;
   font-weight: normal;
-  line-height: 25px;
-  position: absolute;
-  width: 388px;
-  left: 64px;
-  bottom: 30px;
-  z-index: 5;
-}
-
-.image_header-image {
-  width: 765px;
-  right: 0;
-  bottom: 0;
-}
-
-.background_image_image-square {
-  height: 568px;
-  width: 568px;
-  right: 0;
-  top: 64px;
-  background-color: #2f80ed;
-  z-index: -1;
-}
-
-/* Логотип */
-
-.logo {
-  width: 228px;
-  height: 32px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 3;
-}
-
-.logo_item_footer {
-  display: flex;
-  background-image: url('../images/logo_place_footer.svg');
+  line-height: 1.2;
+  text-indent: 0;
   margin: 0;
 }
 
-.logo_item_header {
-  position: absolute;
-  top: 30px;
-  left: 64px;
-  background-image: url('../images/logo_place_header.svg');
-}
-
-
-/* Секции */
-
-/* Заголовки секций */
-
-.section__title {
-  display: flexbox;
-  font-size: 60px;
-  font-weight: 600;
-  width: 60%;
-  text-align: center;
-  z-index: 2;
-}
-
-.section__subtitle {
-  display: flexbox;
-  font-size: 24px;
-  width: 60%;
-  text-align: center;
-  line-height: 1.15;
-  z-index: 1;
-}
-
-/* Секция description */
-
-.section__name_description {
+/*    ========================    СЕКЦИЯ .feynman   ========================    */
+/*                                     FEYNMAN                                  */
+.feynman {
   display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
   flex-wrap: nowrap;
-  width: 80%;
-  min-width: 784px;
-}
-
-.section__name_description_text-block {
-  width: 80%;
-  min-width: 784px;
-}
-
-.page__text_description-brief {
-  width: 175px;
-  margin: 0;
-  justify-content: flex-start;
-}
-
-
-/* Секция Фейнман */
-
-.section__name_feynman {
   justify-content: flex-start;
   align-content: center;
   align-items: center;
-  
-  position: relative;
+  margin: 0;
+  padding: 0;
   height: 890px;
   background-color: #f2f2f2;
 }
 
-.section__title_feynman {
+/*                              === ЭЛЕМЕНТЫ ===                               */
+/*                                ---ТЕКСТ---                                  */
+/*                             h1  ЗАГОЛОВОК TITLE                             */
+.feynman__title {
+  width: 60%;
+  line-height: 1.15;
   font-size: 120px;
+  font-weight: 600;
+  text-align: center;
+  z-index: 2;
   margin: 100px auto 70px auto;
 }
 
-.section__subtitle_feynman {
+/*                           h2 ПОДЗАГОЛОВОК SUBTITLE                          */
+.feynman__subtitle {
   font-size: 36px;
-  line-height: 51px;
   font-weight: normal;
-  margin: 0 auto 0 auto;
+  width: 60%;
+  text-align: center;
+  line-height: 51px;
+  margin: 0 auto;
+  z-index: 1;
 }
 
-.page__link_feynman {
+/*                                   a ССЫЛКА                                 */
+.link_place_feynman {
   position: absolute;
   display: block;
   right: 48px;
@@ -287,121 +287,210 @@
   line-height: 51px;
 }
 
-.image_feynman {
+/*                                  ИЗОБРАЖЕНИЯ                                */
+.feynman__illustration {
+  position: absolute;
+  display: block;
   width: 867px;
   left: 0;
   bottom: 0;
+  z-index: 0;
 }
 
-/* Секция Кауфман */
 
-.section__name_kaufman {
+/*    ========================    СЕКЦИЯ .kaufman   ========================    */
+/*                                     KAUFMAN                                  */
+.kaufman_theme_dark {
+  display: flex;
   position: relative;
-  max-width: 100%;
-  overflow: hidden;
-}
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #1f1f1f;
+  color: #fff;
+  border: none;
+  padding: 90px 0;
+  margin: 0;
 
-.background_image_kaufman {
-  background-size: auto;
+  /*                                  ИЗОБРАЖЕНИЕ                                */
   background-image: url(../images/kaufman-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: 877px;
+  overflow: hidden;
   background-position: top 0 right -210px;
 }
 
 
-/* Футер */
-
-.footer {
-  display: flex;
-  position: relative;
-  min-height: 350px;
-  padding-top: 60px;
-  padding-bottom: 40px;
-}
-
-.footer__tree_columns {
-  width: 90%;
-  min-height: 250px;
-  margin-top: 0;
-  margin-bottom: 0;  
-}
-
-.footer__column {
-  min-width: 711px;
-}
-
-.footer__navigate {
-  position: relative;
-  justify-content: flex-start;
-  margin-top: 0;
-}
-
-.page__link_footer {
+/*                             ======  БЛОК  =====                             */
+/*                              h1 ЗАГОЛОВОК TITLE                             */
+.section-title_theme_dark {
+  font-size: 60px;
+  font-weight: 600;
   color: #fff;
-  line-height: 30px;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  z-index: 2;
 }
 
-.page__link_social {
-  text-indent: 26px;
+/*                              ======  БЛОК  =====                            */
+/*                           h2 ПОДЗАГОЛОВОК SUBTITLE                          */
+.section-subtitle_theme_dark {
+  font-size: 24px;
+  font-weight: normal;
+  color: #fff;
+  width: 60%;
+  text-align: center;
+  line-height: 34px;
+  margin: 0 auto;
+  z-index: 1;
 }
 
-.page__text_footer-copyright {
-  line-height: 25px;
-  margin: 18px 0;
+/*                              ======  БЛОК  =====                            */
+/*                                 ТАБЛИЦА TABLE                               */
+.table_theme_dark {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+  width: 1100px;
+  color: #fff;
+  padding: 0;
+  margin: 0 auto;
 }
 
-/* иконки соцсетей */
-
-.background_image_youtube {
-  position: relative;
-  background-size: auto;
-  background-image: url(../images/youtube-icon.svg);
-  background-position: left;
-}
-
-.background_image_vk {
-  position: relative;
-  background-size: auto;
-  background-image: url(../images/vk_color_white.svg);
-  background-position: left;
-}
-
-.background_image_tiktok {
-  position: relative;
-  background-size: auto;
-  background-image: url(../images/tiktok-icon.svg);
-  background-position: left;
-}
-
-/* Отступы */
-
-.space_top100 {
-  margin-top: 100px;
-}
-
-.space_top60 {
+/*                              === ЭЛЕМЕНТЫ ===                               */
+.table__cell_theme_dark {
+  width: 200px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  color: #fff;
   margin-top: 60px;
 }
 
-.space_top30 {
-  margin-top: 30px;
-}
-
-.space_top90 {
-  margin-top: 90px;
-}
-
-.space_bottom20 {
+/*                                 ---ТЕКСТ---                                 */
+.table__heading_theme_dark {
+  display: flex;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #fff;
+  margin: 0;
   margin-bottom: 20px;
 }
 
-.space_bottom30 {
-  margin-bottom: 30px;
+.table__text_theme_dark {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2;
+  text-indent: 0;
+  color: #fff;
+  margin: 0;
 }
 
-.space_bottom40 {
-  margin-bottom: 30px;
+
+/*    ========================    СЕКЦИЯ .footer   ========================    */
+/*                                     FOOTER                                  */
+.footer {
+  display: flex;
+  position: relative;
+  background-color: #1f1f1f;
+  color: #fff;
+  min-height: 250px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  margin: 0 auto;
 }
 
-.space_bottom90 {
-  margin-bottom: 90px;
+/*                              === ЭЛЕМЕНТЫ ===                               */
+.footer__columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #1f1f1f;
+  color: #fff;
+  width: 90%;
+  min-height: 250px;
+  margin: 0 auto;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+/*                                 ---ТЕКСТ---                                 */
+.footer__column_copyright {
+  justify-content: space-between;
+  min-width: 711px;
+  line-height: 25px;
+  margin: 0;
+}
+
+.footer__author {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2;
+  text-indent: 0;
+  margin: 18px 0;
+
+}
+
+.footer__column-heading {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.footer__column_content_info {
+  justify-content: flex-start;
+  height: 100%;
+  margin: 0;
+
+}
+
+.footer__column-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 16px 0;
+  justify-content: space-between;
+}
+
+.footer__column-link {
+  list-style: none;
+  font-size: 18px;
+  line-height: 30px;
+  color: #fff;
+  font-weight: normal;
+  text-decoration: none;
+  margin: 20px 0 0 0;
+}
+
+.footer__column_social {
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.footer__social-icon {
+  display: inline;
+  margin-right: 7px;
+  width: 16px;
+  height: 16px;
+}
+
+/*                                  ИЗОБРАЖЕНИЕ                                */
+.logo_place_footer {
+  display: flex;
+  background-image: url('../images/logo_place_footer.svg');
+  margin: 0;
 }
