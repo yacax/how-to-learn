@@ -11,12 +11,6 @@
   background-size: contain;
 }
 
-/*                             === БЛОК .link ===                             */
-
-.link {
-  text-decoration: none;
-  color: #2f80ed;
-}
 
 /* ========================= БЛОК-ВСЯ-СТРАНИЦА .page ========================= */
 .page {
@@ -71,7 +65,7 @@
 }
 
 /*                                  ИЗОБРАЖЕНИЯ                                */
-.header__header-image {
+.header__main-illustration {
   position: absolute;
   display: block;
   width: 765px;
@@ -112,13 +106,9 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  margin: auto;
-}
-
-
-.two-columns_place_description {
   width: 80%;
   min-width: 784px;
+  margin: auto;
 }
 
 /*                              === ЭЛЕМЕНТЫ ===                               */
@@ -133,8 +123,11 @@
 }
 
 .two-columns__main-text {
+  display: flex;
+  flex-direction: column;
   max-width: 80%;
   min-width: 784px;
+  row-gap: 30px;
 
 }
 
@@ -143,14 +136,10 @@
   font-weight: normal;
   line-height: 34px;
   margin: 0;
+  
 }
 
 .two-columns__span-accent {
-  display: block;
-  margin: 30px 0;
-}
-
-.two-columns__span-accent_style_bold {
   font-weight: 600;
 }
 
@@ -275,13 +264,15 @@
 }
 
 /*                                   a ССЫЛКА                                 */
-.link_place_feynman {
+.feynman__link {
   position: absolute;
   display: block;
   right: 48px;
   top: 445px;
   font-size: 36px;
   line-height: 51px;
+  text-decoration: none;
+  color: #2f80ed;
 }
 
 /*                                  ИЗОБРАЖЕНИЯ                                */
@@ -297,7 +288,7 @@
 
 /*    ========================    СЕКЦИЯ .kaufman   ========================    */
 /*                                     KAUFMAN                                  */
-.kaufman_theme_dark {
+.kaufman {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -319,76 +310,36 @@
 
 
 /*                             ======  БЛОК  =====                             */
-/*                              h1 ЗАГОЛОВОК TITLE                             */
+/*                                 ЗАГОЛОВОК TITLE                             */
 .section-title_theme_dark {
-  font-size: 60px;
-  font-weight: 600;
   color: #fff;
-  max-width: 60%;
-  text-align: center;
-  margin: 0 auto 20px auto;
-  z-index: 2;
 }
 
 /*                              ======  БЛОК  =====                            */
-/*                           h2 ПОДЗАГОЛОВОК SUBTITLE                          */
+/*                              ПОДЗАГОЛОВОК SUBTITLE                          */
 .section-subtitle_theme_dark {
-  font-size: 24px;
-  font-weight: normal;
   color: #fff;
-  max-width: 60%;
-  text-align: center;
-  line-height: 34px;
-  margin: 0 auto;
-  z-index: 1;
 }
 
 /*                              ======  БЛОК  =====                            */
 /*                                 ТАБЛИЦА TABLE                               */
 .table_theme_dark {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: flex-start;
-  align-items: flex-start;
-  width: 1100px;
   color: #fff;
-  padding: 0;
-  margin: 0 auto;
 }
 
 /*                              === ЭЛЕМЕНТЫ ===                               */
 .table__cell_theme_dark {
   width: 200px;
-  min-height: 140px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-content: stretch;
-  align-items: stretch;
   color: #fff;
-  margin-top: 60px;
 }
 
 /*                                 ---ТЕКСТ---                                 */
 .table__heading_theme_dark {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.15;
   color: #fff;
-  margin: 0;
-  margin-bottom: 20px;
 }
 
 .table__text_theme_dark {
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.2;
-  text-indent: 0;
   color: #fff;
-  margin: 0;
 }
 
 
