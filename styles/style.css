@@ -51,7 +51,7 @@
   font-size: 102px;
   line-height: 96px;
   font-weight: 600;
-  width: 730px;
+  max-width: 730px;
   align-self: center;
   margin: 0 0 0 64px;
   z-index: 3;
@@ -60,7 +60,7 @@
 /*                            h2 ПОДЗАГОЛОВОК SUBTITLE                          */
 .header__subtitle {
   position: absolute;
-  width: 388px;
+  max-width: 388px;
   left: 64px;
   bottom: 30px;
   margin: 0;
@@ -128,13 +128,12 @@
   font-weight: normal;
   line-height: 1.2;
   color: #2f80ed;
-  width: 175px;
-  justify-content: flex-start;
+  max-width: 175px;
   margin: 0;
 }
 
 .two-columns__main-text {
-  width: 80%;
+  max-width: 80%;
   min-width: 784px;
 
 }
@@ -171,7 +170,7 @@
 .section-title {
   font-size: 60px;
   font-weight: 600;
-  width: 60%;
+  max-width: 60%;
   text-align: center;
   margin: 0 auto 20px auto;
   z-index: 2;
@@ -182,7 +181,7 @@
 .section-subtitle {
   font-size: 24px;
   font-weight: normal;
-  width: 60%;
+  max-width: 60%;
   text-align: center;
   line-height: 34px;
   margin: 0 auto;
@@ -220,7 +219,6 @@
 /*                              === ЭЛЕМЕНТЫ ===                               */
 /*                                 ---ТЕКСТ---                                 */
 .table__heading {
-  display: flex;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.15;
@@ -256,7 +254,7 @@
 /*                                ---ТЕКСТ---                                  */
 /*                             h1  ЗАГОЛОВОК TITLE                             */
 .feynman__title {
-  width: 60%;
+  max-width: 60%;
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
@@ -269,7 +267,7 @@
 .feynman__subtitle {
   font-size: 36px;
   font-weight: normal;
-  width: 60%;
+  max-width: 60%;
   text-align: center;
   line-height: 51px;
   margin: 0 auto;
@@ -326,7 +324,7 @@
   font-size: 60px;
   font-weight: 600;
   color: #fff;
-  width: 60%;
+  max-width: 60%;
   text-align: center;
   margin: 0 auto 20px auto;
   z-index: 2;
@@ -338,7 +336,7 @@
   font-size: 24px;
   font-weight: normal;
   color: #fff;
-  width: 60%;
+  max-width: 60%;
   text-align: center;
   line-height: 34px;
   margin: 0 auto;
@@ -376,7 +374,6 @@
 
 /*                                 ---ТЕКСТ---                                 */
 .table__heading_theme_dark {
-  display: flex;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.15;
@@ -489,7 +486,6 @@
 
 /*                                  ИЗОБРАЖЕНИЕ                                */
 .logo_place_footer {
-  display: flex;
   background-image: url('../images/logo_place_footer.svg');
   margin: 0;
 }
