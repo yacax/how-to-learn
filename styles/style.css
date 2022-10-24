@@ -64,6 +64,16 @@
   z-index: 5;
 }
 
+/*                                    links                                    */
+
+.header__link {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #2f80ed;
+}
+
 /*                                  ИЗОБРАЖЕНИЯ                                */
 .header__main-illustration {
   position: absolute;
@@ -423,7 +433,7 @@
   margin: 20px 0 0 0;
 }
 
-.footer__column_social {
+.footer__column_content_social {
   justify-content: flex-start;
   margin: 0;
 }
