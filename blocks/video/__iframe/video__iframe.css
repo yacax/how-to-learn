@@ -1,3 +1,6 @@
 .video__iframe {
   transform: translate(0, 50px);
+  border: none;
+  width: 515px; 
+  height: 316px;  
 }
